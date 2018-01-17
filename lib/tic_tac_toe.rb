@@ -38,6 +38,12 @@ end
 def move(board, index, team = "X")
   board[index] = team
 end
+
+def valid_move?(board,index)
+  if index.between?(0, 8) && position_taken?(board, index) == false
+    true
+  end
+end
 # Define your WIN_COMBINATIONS constant
 WIN_COMBINATIONS = [
   [0,1,2],
