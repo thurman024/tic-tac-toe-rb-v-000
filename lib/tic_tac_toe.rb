@@ -94,3 +94,12 @@ def winner(board)
     board[winning_combo.first]
   end
 end
+
+def play(board)
+  #determine current team
+  team = current_player(board)
+  #get input from player
+  input = gets.strip
+  index = input_to_index(input)
+  move(board, index, team)
+end
